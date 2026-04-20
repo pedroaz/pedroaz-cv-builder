@@ -5,7 +5,7 @@
     "email": "pedro.azvm@gmail.com",
     "phone": "+49 015 23589 7063",
     "image": "cv-photo.png",
-    "summary": "Experienced software engineer with 5+ years building scalable web applications. Passionate about clean code, developer experience, and mentoring junior engineers.",
+    "summary": "xxxxxxxxxxxxxxxxxxxxxxxx",
     "location": {
       "city": "Berlin",
       "region": "Germany"
@@ -38,6 +38,7 @@
           "position": "Engineering Manager",
           "startDate": "2024-06",
           "endDate": null,
+          "summary": "xxxxxxxxxxxx",
           "highlights": [
             "Leading a team of 8 engineers across 3 squads",
             "Driving technical roadmap and architecture decisions",
@@ -48,6 +49,7 @@
           "position": "Senior Software Engineer",
           "startDate": "2022-03",
           "endDate": "2024-05",
+          "summary": "xxxxxxxxxxxx",
           "highlights": [
             "Reduced API latency by 40% through caching strategies",
             "Mentored 3 junior engineers and established code review practices",
@@ -57,76 +59,109 @@
       ]
     },
     {
-      "name": "StartupXYZ",
+      "name": "Capgemini (RDI Software)",
       "position": "Software Engineer",
-      "url": "https://startupxyz.example.com",
       "startDate": "2019-06",
       "endDate": "2022-02",
-      "summary": "Full-stack engineer on a team of 5 building a B2B SaaS platform.",
+      "summary": "xxxxxxxxxxxx",
       "highlights": [
         "Built real-time collaboration features using WebSockets",
         "Implemented CI/CD pipeline reducing deploy time by 60%",
         "Developed internal tooling that saved 10+ hours/week"
       ]
+    },
+    {
+      "name": "Mais1Code",
+      "position": "Course Instructor",
+      "startDate": "2019-06",
+      "endDate": "2022-02",
+      "summary": "xxxxxxxxxxxx",
+      "highlights": [
+        "xxxxxxx"
+      ]
+    },
+    {
+      "name": "Jive Investments",
+      "position": "Course Instructor",
+      "startDate": "2019-06",
+      "endDate": "2022-02",
+      "summary": "xxxxxxxxxxxx",
+      "highlights": [
+        "xxxxxxx"
+      ]
+    },
+    {
+      "name": "Bridge Games",
+      "position": "Course Instructor",
+      "startDate": "2019-06",
+      "endDate": "2022-02",
+      "summary": "xxxxxxxxxxxx",
+      "highlights": [
+        "xxxxxxx"
+      ]
+    },
+    {
+      "name": "B3",
+      "position": "Internship",
+      "startDate": "2016-01",
+      "endDate": "2017-07",
+      "summary": "Worked in the risk ",
+      "highlights": [
+        "xxxxxxx"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of California, Berkeley",
-      "url": "https://berkeley.edu",
-      "area": "Computer Science",
+      "institution": "USP",
+      "url": "https://www5.usp.br/english/institutional/",
+      "area": "Information System",
       "studyType": "Bachelor",
-      "startDate": "2015-08",
-      "endDate": "2019-05",
-      "score": "3.8"
+      "startDate": "2015-01",
+      "endDate": "2018-12"
     },
     {
-      "institution": "Harvard Business School Online",
-      "area": "Business Administration",
+      "institution": "MBA USP/Esalq",
+      "url": "https://www5.each.usp.br/",
+      "area": "Project Management",
       "studyType": "MBA",
-      "startDate": "2023-01",
-      "endDate": "2023-12"
+      "startDate": "2022-10",
+      "endDate": "2024-07"
     },
     {
-      "institution": "AWS Training",
-      "area": "Cloud Architecture",
+      "institution": "Scrum.org",
+      "area": "Scrum Product Owner (PSPO)",
       "studyType": "Certification",
-      "startDate": "2023-08",
-      "endDate": "2023-08"
+      "startDate": "2024-03",
+      "endDate": "2024-04"
     }
   ],
   "skills": {
     "Backend": [
+      "C#",
+      "NodeJS",
       "Python",
-      "Go",
-      "SQL",
-      "FastAPI",
-      "Django",
-      "Node.js"
+      "C++",
+      "Java"
     ],
     "Frontend": [
-      "React",
-      "TypeScript",
-      "JavaScript"
+      "NextJS",
+      "Angular",
+      "Sveltekit"
     ],
     "Cloud & Infrastructure": [
-      "AWS",
+      "Azure",
       "Docker",
-      "Kubernetes",
-      "PostgreSQL",
-      "Redis"
+      "Terraform",
+      "Ansible",
+      "Github Actions"
     ],
-    "Engineering Management": [
+    "Management": [
       "Team Leadership",
       "Hiring",
-      "Roadmap Planning",
-      "Agile"
-    ],
-    "Team Lead": [
-      "Mentoring",
-      "Code Review",
-      "CI/CD",
-      "TDD"
+      "Stakeholder Management",
+      "Agile",
+      "Mentoring"
     ]
   },
   "languages": [

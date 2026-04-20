@@ -184,7 +184,7 @@ section h2 {
 
 .entry .summary {
     font-size: 9.5pt;
-    margin: 0.5em 0;
+    margin: 0.5em 0 0.5em 1.25em;
 }
 
 .highlights {
@@ -199,6 +199,11 @@ section h2 {
 
 .work-entry {
     margin-bottom: 1.5em;
+}
+
+.work-entry .summary {
+    font-size: 9.5pt;
+    margin: 0.5em 0 0.5em 1.6em;
 }
 
 .company-header {
