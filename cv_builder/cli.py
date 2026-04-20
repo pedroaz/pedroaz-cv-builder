@@ -94,6 +94,13 @@ def html_command(args):
         shutil.copy(image_source, output_dir / image)
         html_content = html_content.replace(f"file://{image_source.resolve()}", image)
 
+    import shutil
+    template_dir = Path(__file__).parent / "templates"
+    css_source = template_dir / "styles.css"
+    output_dir = output_path.parent
+    output_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy(css_source, output_dir / "styles.css")
+
     with open(output_path, "w") as f:
         f.write(html_content)
     print(f"HTML generated: {output_path}")
