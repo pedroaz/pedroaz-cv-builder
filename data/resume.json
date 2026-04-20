@@ -30,15 +30,30 @@
   "work": [
     {
       "name": "Berlin Bytes",
-      "position": "Senior Software Engineer",
       "url": "https://techcorp.example.com",
       "startDate": "2022-03",
       "endDate": null,
-      "summary": "Leading backend development for microservices architecture serving 2M+ users.",
-      "highlights": [
-        "Reduced API latency by 40% through caching strategies",
-        "Mentored 3 junior engineers and established code review practices",
-        "Migrated legacy monolith to Kubernetes-based microservices"
+      "positions": [
+        {
+          "position": "Engineering Manager",
+          "startDate": "2024-06",
+          "endDate": null,
+          "highlights": [
+            "Leading a team of 8 engineers across 3 squads",
+            "Driving technical roadmap and architecture decisions",
+            "Implemented new hiring pipeline reducing time-to-hire by 40%"
+          ]
+        },
+        {
+          "position": "Senior Software Engineer",
+          "startDate": "2022-03",
+          "endDate": "2024-05",
+          "highlights": [
+            "Reduced API latency by 40% through caching strategies",
+            "Mentored 3 junior engineers and established code review practices",
+            "Migrated legacy monolith to Kubernetes-based microservices"
+          ]
+        }
       ]
     },
     {
@@ -63,101 +78,69 @@
       "studyType": "Bachelor",
       "startDate": "2015-08",
       "endDate": "2019-05",
-      "score": "3.8",
-      "courses": [
-        "Data Structures & Algorithms",
-        "Operating Systems",
-        "Machine Learning",
-        "Distributed Systems"
-      ]
-    }
-  ],
-  "skills": [
-    {
-      "name": "Languages",
-      "level": "Expert",
-      "keywords": [
-        "Python",
-        "JavaScript",
-        "TypeScript",
-        "Go",
-        "SQL"
-      ]
+      "score": "3.8"
     },
     {
-      "name": "Frameworks",
-      "level": "Expert",
-      "keywords": [
-        "FastAPI",
-        "React",
-        "Node.js",
-        "Django"
-      ]
-    },
-    {
-      "name": "Tools & Platforms",
-      "level": "Advanced",
-      "keywords": [
-        "Docker",
-        "Kubernetes",
-        "AWS",
-        "PostgreSQL",
-        "Redis"
-      ]
-    },
-    {
-      "name": "Practices",
-      "level": "Advanced",
-      "keywords": [
-        "CI/CD",
-        "TDD",
-        "Agile",
-        "Code Review"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "name": "OpenSource CLI Tool",
+      "institution": "Harvard Business School Online",
+      "area": "Business Administration",
+      "studyType": "MBA",
       "startDate": "2023-01",
-      "endDate": "2023-06",
-      "description": "A command-line tool for managing development environments",
-      "highlights": [
-        "2.5k GitHub stars",
-        "Featured in weekly DevTools newsletter"
-      ],
-      "url": "https://github.com/johndoe/devenv"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "AWS Solutions Architect",
-      "date": "2023-08",
-      "issuer": "Amazon Web Services",
-      "url": "https://aws.example.com/cert"
+      "endDate": "2023-12"
     },
     {
-      "name": "Google Cloud Professional",
-      "date": "2022-12",
-      "issuer": "Google Cloud",
-      "url": "https://cloud.google.com/cert"
+      "institution": "AWS Training",
+      "area": "Cloud Architecture",
+      "studyType": "Certification",
+      "startDate": "2023-08",
+      "endDate": "2023-08"
     }
   ],
+  "skills": {
+    "Backend": [
+      "Python",
+      "Go",
+      "SQL",
+      "FastAPI",
+      "Django",
+      "Node.js"
+    ],
+    "Frontend": [
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "Cloud & Infrastructure": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "Engineering Management": [
+      "Team Leadership",
+      "Hiring",
+      "Roadmap Planning",
+      "Agile"
+    ],
+    "Team Lead": [
+      "Mentoring",
+      "Code Review",
+      "CI/CD",
+      "TDD"
+    ]
+  },
   "languages": [
     {
-      "language": "English",
+      "language": "Portuguese",
       "fluency": "Native"
     },
     {
-      "language": "Spanish",
-      "fluency": "Conversational"
-    }
-  ],
-  "awards": [
+      "language": "English",
+      "fluency": "Fluent"
+    },
     {
-      "title": "Employee of the Quarter",
-      "date": "2023-04",
-      "awarder": "TechCorp Inc."
+      "language": "German",
+      "fluency": "B1"
     }
   ]
 }

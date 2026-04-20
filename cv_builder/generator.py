@@ -38,9 +38,7 @@ class CVGenerator:
 
         work_html = self._render_work(data.get("work", []))
         education_html = self._render_education(data.get("education", []))
-        skills_html = self._render_skills(data.get("skills", []))
-        projects_html = self._render_projects(data.get("projects", []))
-        certificates_html = self._render_certificates(data.get("certificates", []))
+        skills_html = self._render_skills(data.get("skills", {}))
         languages_html = self._render_languages(data.get("languages", []))
         awards_html = self._render_awards(data.get("awards", []))
 
@@ -63,8 +61,6 @@ class CVGenerator:
             "{{WORK}}": work_html,
             "{{EDUCATION}}": education_html,
             "{{SKILLS}}": skills_html,
-            "{{PROJECTS}}": projects_html,
-            "{{CERTIFICATES}}": certificates_html,
             "{{LANGUAGES}}": languages_html,
             "{{AWARDS}}": awards_html,
             "{{GENERATED_DATE}}": datetime.now().strftime("%Y-%m-%d"),
@@ -107,28 +103,66 @@ class CVGenerator:
         html = '<section class="work"><h2>Experience</h2>'
         for w in work_list:
             name = w.get("name", "")
-            position = w.get("position", "")
             start = self._format_date(w.get("startDate", ""))
             end = self._format_date(w.get("endDate", ""))
             date_str = f"{start} – {end}" if end else f"{start} – Present"
             summary = w.get("summary", "")
             highlights = w.get("highlights", [])
+            positions = w.get("positions", [])
 
-            html += f'''
-            <div class="entry">
-                <div class="header">
-                    <span class="title">{position} at {name}</span>
-                    <span class="date">{date_str}</span>
-                </div>
-            '''
-            if summary:
-                html += f'<p class="summary">{summary}</p>'
-            if highlights:
-                html += '<ul class="highlights">'
-                for h in highlights:
-                    html += f'<li>{h}</li>'
-                html += '</ul>'
-            html += '</div>'
+            if positions:
+                end_display = end if end else "Present"
+                html += f'''
+                <div class="work-entry">
+                    <div class="company-header">
+                        <span class="company-name">{name}</span>
+                        <span class="company-tenure">({start} – {end_display})</span>
+                    </div>
+                '''
+                for pos in positions:
+                    pos_start = self._format_date(pos.get("startDate", ""))
+                    pos_end = self._format_date(pos.get("endDate", ""))
+                    pos_date_str = f"{pos_start} – {pos_end}" if pos_end else f"{pos_start} – Present"
+                    pos_title = pos.get("position", "")
+                    pos_highlights = pos.get("highlights", [])
+
+                    html += f'''
+                    <div class="position-entry">
+                        <span class="position-marker">●</span>
+                        <span class="position-title">{pos_title}</span>
+                        <span class="position-date">{pos_date_str}</span>
+                    </div>
+                    '''
+                    if pos_highlights:
+                        html += '<ul class="highlights">'
+                        for h in pos_highlights:
+                            html += f'<li>{h}</li>'
+                        html += '</ul>'
+                html += '</div>'
+            else:
+                position = w.get("position", "")
+                if not position:
+                    position = "Unknown Position"
+                end_display = end if end else "Present"
+                html += f'''
+                <div class="work-entry">
+                    <div class="company-header">
+                        <span class="company-name">{name}</span>
+                        <span class="company-tenure">({start} – {end_display})</span>
+                    </div>
+                    <div class="position-entry">
+                        <span class="position-marker">●</span>
+                        <span class="position-title">{position}</span>
+                    </div>
+                '''
+                if summary:
+                    html += f'<p class="summary">{summary}</p>'
+                if highlights:
+                    html += '<ul class="highlights">'
+                    for h in highlights:
+                        html += f'<li>{h}</li>'
+                    html += '</ul>'
+                html += '</div>'
         html += '</section>'
         return html
 
@@ -144,33 +178,34 @@ class CVGenerator:
             end = self._format_date(e.get("endDate", ""))
             date_str = f"{start} – {end}" if end else f"{start} – Present"
             score = e.get("score", "")
+            url = e.get("url", "")
+
+            title = f"{study_type} in {area}" if study_type and area else (study_type or area or institution)
+            subtitle = institution
+            if score:
+                subtitle += f" | Score: {score}"
+            if url:
+                subtitle += f' <a href="{url}" target="_blank" rel="noopener noreferrer">🔗</a>'
 
             html += f'''
             <div class="entry">
                 <div class="header">
-                    <span class="title">{study_type} in {area}</span>
+                    <span class="title">{title}</span>
                     <span class="date">{date_str}</span>
                 </div>
-                <p class="subtitle">{institution}{f" | Score: {score}" if score else ""}</p>
+                <p class="subtitle">{subtitle}</p>
             </div>
             '''
         html += '</section>'
         return html
 
-    def _render_skills(self, skills_list: list) -> str:
-        if not skills_list:
+    def _render_skills(self, skills_dict: dict) -> str:
+        if not skills_dict:
             return ""
-        html = '<section class="skills"><h2>Skills</h2><div class="skills-grid">'
-        for s in skills_list:
-            name = s.get("name", "")
-            level = s.get("level", "")
-            keywords = s.get("keywords", [])
-            html += f'<div class="skill-item"><span class="skill-name">{name}</span>'
-            if level:
-                html += f'<span class="skill-level">{level}</span>'
-            if keywords:
-                html += f'<span class="skill-keywords">{" • ".join(keywords)}</span>'
-            html += '</div>'
+        html = '<section class="skills"><h2>Skills</h2><div class="skills-compact">'
+        for category, items in skills_dict.items():
+            items_str = " • ".join(items) if isinstance(items, list) else items
+            html += f'<div class="skill-row"><span class="skill-category">{category}</span><span class="skill-items">{items_str}</span></div>'
         html += '</div></section>'
         return html
 

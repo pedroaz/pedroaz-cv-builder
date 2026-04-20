@@ -197,36 +197,80 @@ section h2 {
     margin-bottom: 0.25em;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 0.5em;
+.work-entry {
+    margin-bottom: 1.5em;
 }
 
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-    background: var(--bg-alt);
-    border-radius: 4px;
+.company-header {
+    margin-bottom: 0.5em;
 }
 
-.skill-name {
-    font-weight: 600;
-    font-size: 10pt;
+.company-name {
+    font-weight: 700;
+    font-size: 11pt;
     color: var(--primary);
 }
 
-.skill-level {
-    font-size: 8pt;
-    color: var(--accent);
-    margin-top: 0.15em;
+.company-tenure {
+    font-size: 9pt;
+    color: var(--text-light);
+    font-family: var(--font-mono);
+    margin-left: 0.5em;
 }
 
-.skill-keywords {
-    font-size: 8pt;
+.position-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.position-marker {
+    color: var(--accent);
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.position-title {
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: var(--secondary);
+}
+
+.position-date {
+    font-size: 9pt;
     color: var(--text-light);
-    margin-top: 0.15em;
+    font-family: var(--font-mono);
+    margin-left: auto;
+}
+
+.position-entry .highlights {
+    margin: 0.25em 0 0.5em 1.25em;
+    padding-left: 0;
+}
+
+.skills-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+}
+
+.skill-row {
+    display: flex;
+    gap: 0.75em;
+    font-size: 9.5pt;
+    line-height: 1.4;
+}
+
+.skill-category {
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.skill-items {
+    color: var(--text);
 }
 
 .cert-list {
