@@ -4,7 +4,7 @@
     "label": "Engineering Manager",
     "email": "pedro.azvm@gmail.com",
     "phone": "+49 015 23589 7063",
-    "url": "https://pedroaz.de",
+    "image": "cv-photo.png",
     "summary": "Experienced software engineer with 5+ years building scalable web applications. Passionate about clean code, developer experience, and mentoring junior engineers.",
     "location": {
       "city": "Berlin",
@@ -13,24 +13,23 @@
     "profiles": [
       {
         "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "username": "pedroaz",
+        "url": "https://github.com/pedroaz"
       },
       {
         "network": "LinkedIn",
-        "username": "johndoe",
-        "url": "https://linkedin.com/in/johndoe"
+        "username": "pedro-azevedo-627ab8b2",
+        "url": "https://www.linkedin.com/in/pedro-azevedo-627ab8b2/"
       },
       {
-        "network": "Twitter",
-        "username": "@johndoe",
-        "url": "https://twitter.com/johndoe"
+        "network": "Website",
+        "url": "https://pedroaz.de/"
       }
     ]
   },
   "work": [
     {
-      "name": "TechCorp Inc.",
+      "name": "Berlin Bytes",
       "position": "Senior Software Engineer",
       "url": "https://techcorp.example.com",
       "startDate": "2022-03",

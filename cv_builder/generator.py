@@ -27,6 +27,10 @@ class CVGenerator:
         url = basics.get("url", "")
         summary = basics.get("summary", "")
         location = basics.get("location", {})
+        image = basics.get("image", "")
+        if image:
+            image_path = Path(__file__).parent.parent / image
+            image = f"file://{image_path.resolve()}"
 
         location_str = self._format_location(location)
 
@@ -44,12 +48,13 @@ class CVGenerator:
             "{{NAME}}": name,
             "{{LABEL}}": label,
             "{{LABEL_DISPLAY}}": f'<p class="label">{label}</p>' if label else '',
+            "{{IMAGE_DISPLAY}}": f'<img src="{image}" class="profile-photo" alt="Profile photo">' if image else '',
             "{{EMAIL}}": email,
             "{{EMAIL_DISPLAY}}": f'<a href="mailto:{email}" class="contact-item">{email}</a>' if email else '',
             "{{PHONE}}": phone,
             "{{PHONE_DISPLAY}}": f'<a href="tel:{phone}" class="contact-item">{phone}</a>' if phone else '',
             "{{URL}}": url,
-            "{{URL_DISPLAY}}": f'<a href="{url}" class="contact-item">{url}</a>' if url else '',
+            "{{URL_DISPLAY}}": f'<a href="{url}" class="contact-item" target="_blank" rel="noopener noreferrer">{url}</a>' if url else '',
             "{{SUMMARY}}": summary,
             "{{SUMMARY_DISPLAY}}": f'<section class="summary-section"><p>{summary}</p></section>' if summary else '',
             "{{LOCATION}}": location_str,
@@ -90,7 +95,7 @@ class CVGenerator:
             username = p.get("username", "")
             url = p.get("url", "")
             if url:
-                html += f'<a href="{url}" class="profile">{network}</a>'
+                html += f'<a href="{url}" class="profile" target="_blank" rel="noopener noreferrer">{network}</a>'
             else:
                 html += f'<span class="profile">{network}: {username}</span>'
         html += '</div>'
@@ -185,7 +190,7 @@ class CVGenerator:
             html += f'''
             <div class="entry">
                 <div class="header">
-                    <span class="title">{name}{f' <a href="{url}">🔗</a>' if url else ''}</span>
+                    <span class="title">{name}{f' <a href="{url}" target="_blank" rel="noopener noreferrer">🔗</a>' if url else ''}</span>
                     <span class="date">{date_str}</span>
                 </div>
             '''
@@ -215,7 +220,7 @@ class CVGenerator:
             if date:
                 html += f' <span class="date">({date})</span>'
             if url:
-                html += f' <a href="{url}">🔗</a>'
+                html += f' <a href="{url}" target="_blank" rel="noopener noreferrer">🔗</a>'
             html += '</div>'
         html += '</div></section>'
         return html

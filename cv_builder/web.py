@@ -51,7 +51,7 @@ def save():
 
     output_dir = app.config["OUTPUT_DIR"]
     output_dir.mkdir(parents=True, exist_ok=True)
-    pdf_path = output_dir / "preview.pdf"
+    pdf_path = output_dir / "pedro-azevedo-preview.pdf"
 
     generator = CVGenerator()
     html_content = generator.generate(cv_data)
@@ -74,7 +74,7 @@ def preview():
     from weasyprint import HTML, CSS
 
     output_dir = app.config["OUTPUT_DIR"]
-    pdf_path = output_dir / "preview.pdf"
+    pdf_path = output_dir / "pedro-azevedo-preview.pdf"
 
     if request.method == "POST":
         data = request.json
@@ -145,9 +145,7 @@ def run_server(host="127.0.0.1", port=5000, data_dir="data"):
     if not (template_dir / "editor.html").exists():
         create_web_templates(template_dir)
 
-    url = f"http://{host}:{port}"
-    print(f"Opening {url}")
-    webbrowser.open(url)
+    print(f"Server running at http://{host}:{port}")
     app.run(host=host, port=port, debug=True)
 
 

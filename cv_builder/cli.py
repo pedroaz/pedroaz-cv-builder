@@ -28,6 +28,16 @@ def render_command(args):
     generator = CVGenerator(template_name=args.template)
     html_content = generator.generate(data)
 
+    basics = data.get("basics", {})
+    image = basics.get("image", "")
+    if image:
+        import shutil
+        image_source = Path(__file__).parent.parent / image
+        output_dir = output_path.parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy(image_source, output_dir / image)
+        html_content = html_content.replace(f"file://{image_source.resolve()}", image)
+
     template_dir = Path(__file__).parent / "templates"
     css_path = template_dir / "styles.css"
     with open(css_path) as f:
@@ -73,6 +83,16 @@ def html_command(args):
 
     generator = CVGenerator(template_name=args.template)
     html_content = generator.generate(data)
+
+    basics = data.get("basics", {})
+    image = basics.get("image", "")
+    if image:
+        import shutil
+        image_source = Path(__file__).parent.parent / image
+        output_dir = output_path.parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy(image_source, output_dir / image)
+        html_content = html_content.replace(f"file://{image_source.resolve()}", image)
 
     with open(output_path, "w") as f:
         f.write(html_content)

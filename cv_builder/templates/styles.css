@@ -51,6 +51,25 @@ a:hover {
 
 .header-content {
     max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-right {
+    flex-shrink: 0;
+    margin-left: 1em;
+}
+
+.profile-photo {
+    width: 90px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 .name {
@@ -85,12 +104,24 @@ a:hover {
     margin-top: 0.5em;
 }
 
-.profile {
+a.profile {
     color: rgba(255,255,255,0.9);
     font-size: 9pt;
     padding: 0.15em 0.5em;
     border: 1px solid rgba(255,255,255,0.4);
     border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.profile:hover {
+    border-color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+a.profile:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.7);
 }
 
 .summary-section {
