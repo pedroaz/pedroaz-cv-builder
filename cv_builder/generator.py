@@ -39,6 +39,7 @@ class CVGenerator:
         work_html = self._render_work(data.get("work", []))
         education_html = self._render_education(data.get("education", []))
         skills_html = self._render_skills(data.get("skills", {}))
+        other_experiences_html = self._render_other_experiences(data.get("otherExperiences", []))
         languages_html = self._render_languages(data.get("languages", []))
         awards_html = self._render_awards(data.get("awards", []))
 
@@ -61,6 +62,7 @@ class CVGenerator:
             "{{WORK}}": work_html,
             "{{EDUCATION}}": education_html,
             "{{SKILLS}}": skills_html,
+            "{{OTHER_EXPERIENCES}}": other_experiences_html,
             "{{LANGUAGES}}": languages_html,
             "{{AWARDS}}": awards_html,
             "{{GENERATED_DATE}}": datetime.now().strftime("%Y-%m-%d"),
@@ -109,6 +111,8 @@ class CVGenerator:
             summary = w.get("summary", "")
             highlights = w.get("highlights", [])
             positions = w.get("positions", [])
+            skills = w.get("skills", [])
+            skills_html = f'<div class="work-skills">{" • ".join(skills)}</div>' if skills else ""
 
             if positions:
                 end_display = end if end else "Present"
@@ -118,6 +122,7 @@ class CVGenerator:
                         <span class="company-name">{name}</span>
                         <span class="company-tenure">({start} – {end_display})</span>
                     </div>
+                    {skills_html}
                 '''
                 for pos in positions:
                     pos_start = self._format_date(pos.get("startDate", ""))
@@ -141,19 +146,19 @@ class CVGenerator:
                 html += '</div>'
             else:
                 position = w.get("position", "")
-                if not position:
-                    position = "Unknown Position"
                 end_display = end if end else "Present"
+                position_html = f'''<div class="position-entry">
+                        <span class="position-marker">&#9679;</span>
+                        <span class="position-title">{position}</span>
+                    </div>''' if position else ''
                 html += f'''
                 <div class="work-entry">
                     <div class="company-header">
                         <span class="company-name">{name}</span>
                         <span class="company-tenure">({start} – {end_display})</span>
                     </div>
-                    <div class="position-entry">
-                        <span class="position-marker">●</span>
-                        <span class="position-title">{position}</span>
-                    </div>
+                    {skills_html}
+                    {position_html}
                 '''
                 if summary:
                     html += f'<p class="summary">{summary}</p>'
@@ -289,6 +294,23 @@ class CVGenerator:
                 </div>
                 {f'<p class="subtitle">{awarder}</p>' if awarder else ''}
                 {f'<p class="summary">{summary}</p>' if summary else ''}
+            </div>
+            '''
+        html += '</section>'
+        return html
+
+    def _render_other_experiences(self, experiences: list) -> str:
+        if not experiences:
+            return ""
+        html = '<section class="other-experiences"><h2>Other Experiences</h2>'
+        for e in experiences:
+            title = e.get("title", "")
+            description = e.get("description", "")
+
+            html += f'''
+            <div class="other-exp-entry">
+                <div class="other-exp-title">{title}</div>
+                {f'<p class="other-exp-desc">{description}</p>' if description else ''}
             </div>
             '''
         html += '</section>'
