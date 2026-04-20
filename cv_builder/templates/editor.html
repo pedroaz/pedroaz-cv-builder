@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit: {{ cv_name }}</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 0; background: #f5f5f5; }
+        .container { display: flex; height: 100vh; }
+        .editor-pane { width: 50%; padding: 1em; overflow: auto; }
+        .preview-pane { width: 50%; background: #ddd; padding: 1em; overflow: auto; }
+        textarea { width: 100%; height: calc(100vh - 80px); font-family: Monaco, monospace; font-size: 12px; border: none; padding: 1em; resize: none; }
+        iframe { width: 100%; height: calc(100vh - 80px); border: none; background: white; }
+        .header { background: #2c3e50; color: white; padding: 1em; display: flex; justify-content: space-between; align-items: center; }
+        .btn { background: #3498db; color: white; border: none; padding: 0.5em 1em; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #2980b9; }
+        .btn-success { background: #27ae60; }
+        .btn-success:hover { background: #229954; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span>Editing: {{ cv_name }}</span>
+        <div>
+            <button class="btn btn-success" onclick="save()">Save</button>
+            <a href="/api/export/{{ cv_name }}" class="btn" style="background:#27ae60;">Download PDF</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="editor-pane">
+            <textarea id="jsonEditor">{{ cv_data }}</textarea>
+        </div>
+        <div class="preview-pane">
+            <iframe id="previewFrame" title="Preview"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const cvName = "{{ cv_name }}";
+        const previewFrame = document.getElementById('previewFrame');
+
+        function loadPreview() {
+            previewFrame.src = '/api/preview';
+        }
+
+        async function save() {
+            const data = getEditorValue();
+            if (!data) return;
+
+            await fetch('/api/save', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name: cvName, data: data})
+            });
+
+            loadPreview();
+        }
+
+        function getEditorValue() {
+            const editor = document.getElementById('jsonEditor');
+            try {
+                return JSON.parse(editor.value);
+            } catch (e) {
+                return null;
+            }
+        }
+
+        loadPreview();
+    </script>
+</body>
+</html>

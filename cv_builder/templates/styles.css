@@ -1,0 +1,255 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #34495e;
+    --accent: #3498db;
+    --text: #333;
+    --text-light: #666;
+    --bg: #fff;
+    --bg-alt: #f8f9fa;
+    --border: #e1e4e8;
+    --font-main: 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Monaco', 'Courier New', monospace;
+}
+
+@page {
+    size: A4;
+    margin: 1.5cm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 10pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    background: var(--primary);
+    color: white;
+    padding: 1.5em 1em;
+    margin-bottom: 1em;
+}
+
+.header-content {
+    max-width: 100%;
+}
+
+.name {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25em;
+}
+
+.label {
+    font-size: 12pt;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 0.75em;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1.5em;
+    font-size: 9pt;
+    margin-bottom: 0.5em;
+}
+
+.contact-item {
+    color: rgba(255,255,255,0.9);
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    margin-top: 0.5em;
+}
+
+.profile {
+    color: rgba(255,255,255,0.9);
+    font-size: 9pt;
+    padding: 0.15em 0.5em;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+}
+
+.summary-section {
+    background: var(--bg-alt);
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-left: 3px solid var(--accent);
+}
+
+.summary-section p {
+    font-size: 10pt;
+    color: var(--text);
+}
+
+section {
+    margin-bottom: 1.5em;
+}
+
+section h2 {
+    font-size: 13pt;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3em;
+    margin-bottom: 0.75em;
+}
+
+.entry {
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    border-left: 2px solid var(--border);
+}
+
+.entry .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25em;
+}
+
+.entry .title {
+    font-weight: 600;
+    font-size: 11pt;
+    color: var(--secondary);
+}
+
+.entry .date {
+    font-size: 9pt;
+    color: var(--text-light);
+    font-family: var(--font-mono);
+}
+
+.entry .subtitle {
+    font-size: 9pt;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.entry .summary {
+    font-size: 9.5pt;
+    margin: 0.5em 0;
+}
+
+.highlights {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+}
+
+.highlights li {
+    font-size: 9pt;
+    margin-bottom: 0.25em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.5em;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    background: var(--bg-alt);
+    border-radius: 4px;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 10pt;
+    color: var(--primary);
+}
+
+.skill-level {
+    font-size: 8pt;
+    color: var(--accent);
+    margin-top: 0.15em;
+}
+
+.skill-keywords {
+    font-size: 8pt;
+    color: var(--text-light);
+    margin-top: 0.15em;
+}
+
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.cert-item {
+    font-size: 10pt;
+    padding: 0.5em;
+    background: var(--bg-alt);
+    border-radius: 4px;
+}
+
+.cert-item .issuer {
+    color: var(--text-light);
+    font-size: 9pt;
+}
+
+.cert-item .date {
+    color: var(--text-light);
+    font-size: 9pt;
+}
+
+.lang-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.lang-item {
+    font-size: 10pt;
+}
+
+.main-footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.generated-at {
+    font-size: 8pt;
+    color: var(--text-light);
+}
+
+@media print {
+    body {
+        padding: 0;
+    }
+    .main-header {
+        background: var(--primary) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

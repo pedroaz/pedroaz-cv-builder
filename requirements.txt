@@ -1,0 +1,4 @@
+weasyprint>=68.0
+flask>=3.0.0
+jsonschema>=4.20.0
+httpx>=0.25.0
