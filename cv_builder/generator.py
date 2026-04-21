@@ -93,9 +93,9 @@ class CVGenerator:
             username = p.get("username", "")
             url = p.get("url", "")
             if url:
-                html += f'<a href="{url}" class="profile" target="_blank" rel="noopener noreferrer">{network}</a>'
+                html += f'<a href="{url}" class="profile-badge" target="_blank" rel="noopener noreferrer">{network}</a>'
             else:
-                html += f'<span class="profile">{network}: {username}</span>'
+                html += f'<span class="profile-badge">{network}: {username}</span>'
         html += '</div>'
         return html
 
@@ -207,10 +207,12 @@ class CVGenerator:
     def _render_skills(self, skills_dict: dict) -> str:
         if not skills_dict:
             return ""
-        html = '<section class="skills"><h2>Skills</h2><div class="skills-compact">'
+        html = '<section class="skills"><h2>Skills</h2><div class="skills-inline">'
+        parts = []
         for category, items in skills_dict.items():
             items_str = " • ".join(items) if isinstance(items, list) else items
-            html += f'<div class="skill-row"><span class="skill-category">{category}</span><span class="skill-items">{items_str}</span></div>'
+            parts.append(f'<span class="skill-inline-item"><span class="skill-category">{category}:</span> <span class="skill-items">{items_str}</span></span>')
+        html += ' <span class="skill-separator">|</span> '.join(parts)
         html += '</div></section>'
         return html
 
@@ -268,12 +270,14 @@ class CVGenerator:
     def _render_languages(self, langs: list) -> str:
         if not langs:
             return ""
-        html = '<section class="languages"><h2>Languages</h2><div class="lang-list">'
+        html = '<div class="header-languages">'
         for l in langs:
             lang = l.get("language", "")
             fluency = l.get("fluency", "")
-            html += f'<span class="lang-item"><strong>{lang}</strong>{f": {fluency}" if fluency else ""}</span>'
-        html += '</div></section>'
+            if "(" in fluency and ")" in fluency:
+                fluency = fluency.split("(")[-1].split(")")[0]
+            html += f'<span class="profile-badge">{lang}: {fluency}</span>'
+        html += '</div>'
         return html
 
     def _render_awards(self, awards: list) -> str:
@@ -302,19 +306,21 @@ class CVGenerator:
     def _render_other_experiences(self, experiences: list) -> str:
         if not experiences:
             return ""
-        html = '<section class="other-experiences"><h2>Other Experiences</h2>'
+        html = '<section class="other-experiences"><h2>Other Experiences</h2><div class="other-exp-grid">'
         for e in experiences:
             title = e.get("title", "")
             description = e.get("description", "")
 
             html += f'''
-            <div class="position-entry">
-                <span class="position-marker">●</span>
-                <span class="position-title">{title}</span>
+            <div class="other-exp-item">
+                <div class="position-entry">
+                    <span class="position-marker">●</span>
+                    <span class="position-title">{title}</span>
+                </div>
+                {f'<p class="other-exp-desc">{description}</p>' if description else ''}
             </div>
-            {f'<p class="other-exp-desc">{description}</p>' if description else ''}
             '''
-        html += '</section>'
+        html += '</div></section>'
         return html
 
     def _format_date(self, date_str: str) -> str:

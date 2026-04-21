@@ -13,7 +13,7 @@
 
 @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 1.2cm 1.5cm;
 }
 
 * {
@@ -68,7 +68,20 @@ a:hover {
 .header-right {
     flex-shrink: 0;
     margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 0.4em;
 }
+
+.header-languages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    align-items: stretch;
+}
+
 
 .profile-photo {
     width: 72px;
@@ -113,7 +126,7 @@ a:hover {
     margin-top: 0.15em;
 }
 
-a.profile {
+.profile-badge {
     color: rgba(255,255,255,0.9);
     font-size: 8.5pt;
     line-height: 1.1;
@@ -125,12 +138,12 @@ a.profile {
     text-align: center;
 }
 
-a.profile:hover {
+a.profile-badge:hover {
     border-color: rgba(255,255,255,0.7);
     text-decoration: none;
 }
 
-a.profile:focus {
+a.profile-badge:focus {
     outline: none;
     border-color: rgba(255,255,255,0.7);
 }
@@ -163,7 +176,7 @@ section h2 {
 }
 
 .entry {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     padding-left: 0.5em;
     border-left: 2px solid var(--border);
 }
@@ -209,7 +222,9 @@ section h2 {
 }
 
 .work-entry {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .work-entry .summary {
@@ -272,31 +287,40 @@ section h2 {
     padding-left: 0;
 }
 
+.other-exp-grid {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.other-exp-item {
+    flex: 1;
+}
+
 .other-exp-desc {
     font-size: 9.5pt;
     margin: 0.25em 0 0.5em 1.25em;
     color: var(--text-light);
 }
 
-.skills-compact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.02em;
+.skills-inline {
+    font-size: 9.5pt;
+    line-height: 1.5;
 }
 
-.skill-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6em;
-    font-size: 9.3pt;
-    line-height: 1.15;
+.skill-inline-item {
+    display: inline;
+}
+
+.skill-separator {
+    color: var(--accent);
+    font-weight: bold;
+    margin: 0 0.5em;
 }
 
 .skill-category {
     font-weight: 600;
     color: var(--primary);
-    min-width: 132px;
-    flex-shrink: 0;
 }
 
 .skill-items {
