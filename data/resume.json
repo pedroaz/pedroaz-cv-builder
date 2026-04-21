@@ -5,7 +5,7 @@
     "email": "pedro.azvm@gmail.com",
     "phone": "+49 015 23589 7063",
     "image": "cv-photo.png",
-    "summary": "Engineering Manager with a hands-on approach to software development. Strong consulting background and proven track record of delivering multiple applications for diverse sectors. My goal is transforming business requirements into software and leading software development teams.",
+    "summary": "I am an Engineering Manager who bridges the gap between business goals and technical execution. I maintain a hands-on approach to software architecture while focusing on building healthy, high-performing teams. I have a proven track record of scaling engineering organizations and establishing modern developer cultures from the ground up.",
     "location": {
       "city": "Berlin",
       "region": "Germany"
@@ -51,11 +51,12 @@
           "startDate": "2025-01",
           "endDate": null,
           "highlights": [
-            "Lead multiple times multi disciplinary teams to deliver projects from beginning to end, with quality deliveries and strong team dynamics",
-            "Lead different projects of varied scales and focuses (web, mobile, infrastructure)",
-            "Founded development chapter in the company, creating space for a strong tech culture, discussing topics as security, platform and testing",
-            "Served as a strong interface between business and tech, providing the team and the client the required context for successful projects",
-            "Improved the hiring processes and contributed to establishing growth plan for the tech team"
+            "Lead cross-functional teams to deliver end-to-end projects with a focus on code quality and sustainable team velocity.",
+            "Manage a diverse portfolio of technical projects across web, mobile, and cloud infrastructure.",
+            "Serve as the primary technical interface for stakeholders, translating business requirements into actionable technical roadmaps.",
+            "Founded the company's first internal 'Tech Chapter' to standardize practices around security, platform stability, and automated testing.",
+            "Refined the interview pipeline and established a structured career growth framework for the engineering team.",
+            "Established 1:1s and provided mentorship and support individual career development across the team."
           ]
         },
         {
@@ -63,9 +64,9 @@
           "startDate": "2023-06",
           "endDate": "2025-01",
           "highlights": [
-            "Designed and implemented scalable cloud-native solutions within a distributed systems environment.",
-            "Developed high-throughput distributed systems using C# and Azure.",
-            "Lead technical workshops with clients and acted as team lead on client teams"
+            "Designed and built high-throughput distributed systems and cloud-native services using several technologies such as C#, Angular, Python and Azure.",
+            "Automated infrastructure provisioning and deployment workflows using Terraform and GitHub Actions.",
+            "Led technical discovery workshops with clients and acted as the technical lead within embedded client squads."
           ]
         }
       ]
@@ -90,10 +91,9 @@
           "startDate": "2022-02",
           "endDate": "2023-06",
           "highlights": [
-            "Strategic technical leadership for a large-scale digital transformation.",
-            "Assisted on a project expansion from a single team to over 10 cross-functional squads.",
-            "Guided architectural discussions across Backend, Frontend, and Infrastructure teams. Establishing strong DDD boundaries to facilitate complex domain discussions",
-            "Established a 'Subject Matter Expert' (SME) framework to decentralize knowledge and empower developers."
+            "Directed the technical strategy for a large-scale digital transformation, scaling the effort from a single team to over 10 cross-functional squads.",
+            "Defined architectural boundaries using Domain-Driven Design (DDD) to manage complex business logic across backend and infrastructure teams.",
+            "Established a 'Subject Matter Expert' (SME) framework to decentralize knowledge and provide developers with ownership over technical domains."
           ]
         },
         {
@@ -101,9 +101,9 @@
           "startDate": "2019-05",
           "endDate": "2022-02",
           "highlights": [
-            "Worked on several restaurant components, such as POS and Kitchen components",
-            "Worked close to markets on on premise deployments, owning migration processes for different markets",
-            "Development and support of Monolith Application (Cpp, Java, Qt) and development of new features (C#)"
+            "Developed core retail technology, including POS and kitchen management systems, for high-volume environments.",
+            "Owned the migration and deployment of on-premise systems for various international markets.",
+            "Maintained legacy C++/Java systems while implementing modern service features in C#."
           ]
         }
       ]
@@ -114,8 +114,8 @@
       "startDate": "2019-01",
       "endDate": "2019-04",
       "highlights": [
-        "Developed data-driven solutions for an asset management firm, focusing on automation and cloud migration.",
-        "Executed the migration of legacy processes to AWS Lambda functions for better scalability."
+        "Automated financial data workflows for an asset management firm, improving data processing speed and accuracy.",
+        "Migrated legacy backend processes to AWS Lambda to improve system scalability and reduce operational overhead."
       ],
       "skills": [
         "Python",
@@ -129,8 +129,8 @@
       "startDate": "2018-06",
       "endDate": "2018-12",
       "highlights": [
-        "Built therapeutic VR/AR applications using Unity for healthcare professionals.",
-        "Developed custom Unity plugins to streamline the content creation pipeline."
+        "Built VR/AR therapeutic applications in Unity for healthcare providers.",
+        "Created custom Unity plugins that streamlined the asset pipeline and content creation process."
       ],
       "skills": [
         "C#",
@@ -143,7 +143,7 @@
       "startDate": "2017-08",
       "endDate": "2018-04",
       "highlights": [
-        "Founded a niche VR agency focused on architectural visualisation."
+        "Launched a VR agency specializing in interactive architectural visualizations for real estate clients."
       ],
       "skills": [
         "C#",
@@ -157,8 +157,8 @@
       "startDate": "2016-01",
       "endDate": "2017-07",
       "highlights": [
-        "Developed risk analysis and data processing tools within the Credit Department.",
-        "Modernised data analysis workflows by introducing software development best practices to non-technical teams."
+        "Developed risk analysis and data processing tools for the Credit Department.",
+        "Introduced Python-based automation and version control to modernize data workflows for non-technical teams."
       ],
       "skills": [
         "R",
@@ -191,7 +191,7 @@
     },
     {
       "institution": "Scrum.org",
-      "area": "Professional Scrum Product Owner (PSPO)",
+      "area": "Professional Scrum Product Owner (PSPO I)",
       "studyType": "Certification",
       "startDate": "2024-03",
       "endDate": "2024-04"
@@ -199,7 +199,7 @@
   ],
   "skills": {
     "Backend": [
-      "C#",
+      "C# / .NET",
       "NodeJS",
       "Python",
       "C++",
@@ -221,7 +221,7 @@
       "Terraform",
       "Ansible",
       "GitHub Actions",
-      "CI/CD"
+      "CI/CD Pipelines"
     ],
     "Management": [
       "Engineering Leadership",
@@ -235,11 +235,11 @@
   "otherExperiences": [
     {
       "title": "University Prep Course Instructor",
-      "description": "Taught Physics and Mathematics for the free university prep course"
+      "description": "Taught Physics and Mathematics for a volunteer-run university preparation program."
     },
     {
       "title": "Course instructor at Mais1Code",
-      "description": "Volunteered as a React and NodeJS instructor for students from underserved communities."
+      "description": "Volunteered as a React and NodeJS instructor for students from underserved backgrounds."
     }
   ],
   "languages": [
@@ -249,11 +249,11 @@
     },
     {
       "language": "English",
-      "fluency": "Fluent / Professional C2"
+      "fluency": "Full Professional Proficiency (C2)"
     },
     {
       "language": "German",
-      "fluency": "B1"
+      "fluency": "Professional Working Proficiency (B1)"
     }
   ]
 }
