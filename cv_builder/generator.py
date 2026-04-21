@@ -308,10 +308,11 @@ class CVGenerator:
             description = e.get("description", "")
 
             html += f'''
-            <div class="other-exp-entry">
-                <div class="other-exp-title">{title}</div>
-                {f'<p class="other-exp-desc">{description}</p>' if description else ''}
+            <div class="position-entry">
+                <span class="position-marker">●</span>
+                <span class="position-title">{title}</span>
             </div>
+            {f'<p class="other-exp-desc">{description}</p>' if description else ''}
             '''
         html += '</section>'
         return html

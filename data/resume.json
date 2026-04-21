@@ -5,7 +5,7 @@
     "email": "pedro.azvm@gmail.com",
     "phone": "+49 015 23589 7063",
     "image": "cv-photo.png",
-    "summary": "Engineering Manager with a strong technical foundation in distributed systems and cloud-native architecture. Proven track record of scaling engineering teams, leading digital transformations, and bridging the gap between complex business requirements and high-performance technical execution.",
+    "summary": "Engineering Manager with a hands-on approach to software development. Strong consulting background and proven track record of delivering multiple applications for diverse sectors. My goal is transforming business requirements into software and leading software development teams.",
     "location": {
       "city": "Berlin",
       "region": "Germany"
@@ -35,36 +35,37 @@
       "endDate": null,
       "skills": [
         "C#",
-        "Azure",
         "NodeJS",
         "Python",
+        "Azure",
+        "Terraform",
+        "Github Actions",
         "NextJS",
         "Angular",
-        "Sveltekit"
+        "Sveltekit",
+        "React Native"
       ],
       "positions": [
         {
           "position": "Engineering Manager",
           "startDate": "2025-01",
           "endDate": null,
-          "summary": "Dual-hat role managing organizational growth while maintaining technical leadership. Responsible for hiring, team health, and aligning technical roadmaps with business objectives.",
           "highlights": [
-            "Scale multidisciplinary engineering teams through structured hiring and onboarding processes.",
-            "Facilitate communication between business stakeholders and technical teams to ensure predictable delivery of high-impact features.",
-            "Led the end-to-end delivery of greenfield integration projects for a global web platform.",
-            "Championed internal development programs to upskill engineers and improve team retention.",
-            "Oversee the development and maintenance of high-traffic web and mobile applications."
+            "Lead multiple times multi disciplinary teams to deliver projects from beginning to end, with quality deliveries and strong team dynamics",
+            "Lead different projects of varied scales and focuses (web, mobile, infrastructure)",
+            "Founded development chapter in the company, creating space for a strong tech culture, discussing topics as security, platform and testing",
+            "Served as a strong interface between business and tech, providing the team and the client the required context for successful projects",
+            "Improved the hiring processes and contributed to establishing growth plan for the tech team"
           ]
         },
         {
           "position": "Senior Software Engineer",
           "startDate": "2023-06",
           "endDate": "2025-01",
-          "summary": "Designed and implemented scalable cloud-native solutions within a distributed systems environment.",
           "highlights": [
+            "Designed and implemented scalable cloud-native solutions within a distributed systems environment.",
             "Developed high-throughput distributed systems using C# and Azure.",
-            "Modernized legacy ERP applications, improving performance and maintainability.",
-            "Provided technical mentorship and code reviews to maintain high quality standards across the codebase."
+            "Lead technical workshops with clients and acted as team lead on client teams"
           ]
         }
       ]
@@ -74,57 +75,47 @@
       "position": "Delivery Architect",
       "startDate": "2019-04",
       "endDate": "2023-06",
-      "summary": "Played a key role in a major digital transformation for a global QSR client (McDonald's), progressing from Developer to Architect.",
-      "highlights": [
-        "Orchestrated a project expansion from a single team to over 10 cross-functional squads.",
-        "Led the architectural transition from a C++ monolith to a C# microservices-based distributed system.",
-        "Implemented Domain-Driven Design (DDD) principles to ensure a scalable and maintainable system architecture.",
-        "Automated CI/CD pipelines, significantly reducing deployment cycles and manual overhead.",
-        "Built real-time collaboration tools using WebSockets to improve operational efficiency."
-      ],
       "skills": [
         "C#",
         "C++",
         "Java",
-        "Javascript",
-        "KnockoutJS",
         "Angular",
         "DDD",
-        "Microservices"
+        "Terraform",
+        "Ansible"
       ],
       "positions": [
         {
           "position": "Delivery Architect",
           "startDate": "2022-02",
           "endDate": "2023-06",
-          "summary": "Strategic technical leadership for a large-scale digital transformation.",
           "highlights": [
-            "Guided architectural discussions across Backend, Frontend, and Infrastructure teams.",
+            "Strategic technical leadership for a large-scale digital transformation.",
+            "Assisted on a project expansion from a single team to over 10 cross-functional squads.",
+            "Guided architectural discussions across Backend, Frontend, and Infrastructure teams. Establishing strong DDD boundaries to facilitate complex domain discussions",
             "Established a 'Subject Matter Expert' (SME) framework to decentralize knowledge and empower developers."
           ]
         },
         {
-          "position": "Software Developer",
+          "position": "Software Engineer",
           "startDate": "2019-05",
           "endDate": "2022-02",
-          "summary": "Full-stack development focused on distributed systems and on-premise deployments.",
           "highlights": [
-            "Developed internal tooling that automated repetitive tasks, saving substantial engineering hours weekly.",
-            "Managed complex on-premise deployments and architecture patterns."
+            "Worked on several restaurant components, such as POS and Kitchen components",
+            "Worked close to markets on on premise deployments, owning migration processes for different markets",
+            "Development and support of Monolith Application (Cpp, Java, Qt) and development of new features (C#)"
           ]
         }
       ]
     },
     {
       "name": "Jive Investments",
-      "position": "Software Engineer / Data Specialist",
+      "position": "Software Engineer",
       "startDate": "2019-01",
       "endDate": "2019-04",
-      "summary": "Developed data-driven solutions for an asset management firm, focusing on automation and cloud migration.",
       "highlights": [
-        "Streamlined data mining processes using Python and SQL Server.",
-        "Executed the migration of legacy processes to AWS Lambda functions for better scalability.",
-        "Integrated Salesforce APIs to automate lead management and data synchronization."
+        "Developed data-driven solutions for an asset management firm, focusing on automation and cloud migration.",
+        "Executed the migration of legacy processes to AWS Lambda functions for better scalability."
       ],
       "skills": [
         "Python",
@@ -137,9 +128,8 @@
       "position": "Game Developer",
       "startDate": "2018-06",
       "endDate": "2018-12",
-      "summary": "Built therapeutic VR/AR applications using Unity for healthcare environments.",
       "highlights": [
-        "Integrated Kinect sensor technology to assist in physical therapy tracking.",
+        "Built therapeutic VR/AR applications using Unity for healthcare professionals.",
         "Developed custom Unity plugins to streamline the content creation pipeline."
       ],
       "skills": [
@@ -152,7 +142,9 @@
       "position": "Founder / VR Developer",
       "startDate": "2017-08",
       "endDate": "2018-04",
-      "summary": "Founded a niche VR agency focused on architectural visualization.",
+      "highlights": [
+        "Founded a niche VR agency focused on architectural visualisation."
+      ],
       "skills": [
         "C#",
         "Unity",
@@ -164,10 +156,9 @@
       "position": "Software Engineering Intern",
       "startDate": "2016-01",
       "endDate": "2017-07",
-      "summary": "Developed risk analysis and data processing tools within the Credit Department.",
       "highlights": [
-        "Modernized data analysis workflows by introducing software development best practices to non-technical teams.",
-        "Built automated onboarding software that streamlined client integration into the financial system."
+        "Developed risk analysis and data processing tools within the Credit Department.",
+        "Modernised data analysis workflows by introducing software development best practices to non-technical teams."
       ],
       "skills": [
         "R",
@@ -183,6 +174,13 @@
       "studyType": "Bachelor",
       "startDate": "2015-01",
       "endDate": "2018-12"
+    },
+    {
+      "institution": "University of S\u00e3o Paulo (USP)",
+      "area": "Physics (incomplete)",
+      "studyType": "Bachelor",
+      "startDate": "2012-01",
+      "endDate": "2014-12"
     },
     {
       "institution": "MBA USP/Esalq",
@@ -237,10 +235,10 @@
   "otherExperiences": [
     {
       "title": "University Prep Course Instructor",
-      "description": "Taught Physics and Mathematics, developing the ability to explain complex concepts simply."
+      "description": "Taught Physics and Mathematics for the free university prep course"
     },
     {
-      "title": "Mais1Code Instructor",
+      "title": "Course instructor at Mais1Code",
       "description": "Volunteered as a React and NodeJS instructor for students from underserved communities."
     }
   ],

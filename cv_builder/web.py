@@ -2,11 +2,14 @@ import json
 import webbrowser
 from pathlib import Path
 from flask import Flask, render_template, request, send_file, jsonify, redirect
+from flask_cors import CORS
 
 from .generator import CVGenerator
 from .schema import CVSchema
 
 app = Flask(__name__, template_folder=str(Path(__file__).parent / "templates"))
+app.secret_key = "dev-secret-key"
+CORS(app)
 app.config["DATA_DIR"] = Path("data")
 app.config["OUTPUT_DIR"] = Path("output")
 
