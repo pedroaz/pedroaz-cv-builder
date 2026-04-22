@@ -55,7 +55,7 @@ class CVGenerator:
             "{{URL}}": url,
             "{{URL_DISPLAY}}": f'<a href="{url}" class="contact-item" target="_blank" rel="noopener noreferrer">{url}</a>' if url else '',
             "{{SUMMARY}}": summary,
-            "{{SUMMARY_DISPLAY}}": f'<section class="summary-section"><p>{summary}</p></section>' if summary else '',
+            "{{SUMMARY_DISPLAY}}": f'<section class="summary-section"><h2>Professional Summary</h2><p>{summary}</p></section>' if summary else '',
             "{{LOCATION}}": location_str,
             "{{LOCATION_DISPLAY}}": f'<span class="contact-item location">{location_str}</span>' if location_str else '',
             "{{PROFILES}}": profiles_html,

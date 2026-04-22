@@ -43,7 +43,11 @@
         "NextJS",
         "Angular",
         "Sveltekit",
-        "React Native"
+        "React Native",
+        "Playwright",
+        "Agentic Development",
+        "OTel",
+        "Docker"
       ],
       "positions": [
         {
